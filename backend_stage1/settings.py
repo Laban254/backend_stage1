@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-
+import django_heroku
 
 
 
@@ -130,9 +130,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Configure Django App for Heroku.
-import django_heroku
+
 django_heroku.settings(locals())
-heroku config:set DISABLE_COLLECTSTATIC=1
 
 
 # Default primary key field type
